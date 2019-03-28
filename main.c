@@ -279,21 +279,8 @@ int main(int argc, char *argv[])
         log_pid=child_pid;
         DEBUG_PRINTF("this is main process with pid= %d, starts to make threads \n",getpid());
         
-//         sleep(1);
-//         int num_trial=0;
-//         do
-//         {
-//             num_trial++;
-//             connection=init_connection(1);
-//         }while(connection==NULL&&num_trial<=3);
-//         
-//         if(num_trial>3)
-//         {
-//             kill(log_pid,SIGKILL);
-//             return INIT_FAILURE;
-//         }
         
-         sleep(1);
+//          sleep(1);
          sbuffer_init(& sbuffer);
          connection=init_connection(1);
         
@@ -326,7 +313,7 @@ int main(int argc, char *argv[])
         kill(log_pid,SIGKILL);
         DEBUG_PRINTF("finish clean\n");
         fflush(stdout);
-        DEBUG_PRINTF("hello,after thread \n");
+        DEBUG_PRINTF("byebye,after thread \n");
     }
     
     return 0;
